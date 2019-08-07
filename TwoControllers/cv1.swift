@@ -15,24 +15,40 @@ class cv1: UICollectionViewController {
     var data:[String] = ["Tom","Sam","Bob","Roger"]
     
     //let flowLayout = UICollectionViewLayout()
+    
+    override init(collectionViewLayout layout: UICollectionViewLayout) {
+        super.init(collectionViewLayout: layout)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+   
+    
+  
+      
         print("Collection One Loading")
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(viewCell.self, forCellWithReuseIdentifier: CELL_ID)
-        collectionView!.delegate = self
-        collectionView!.dataSource = self
+        let layoutOne = UICollectionViewFlowLayout()
+        layoutOne.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        //layoutOne.itemSize = CGSize(width: view.frame.width, height: 700)
+        layoutOne.itemSize = CGSize(width: 50, height: 50)
+        self.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        self.collectionView = UICollectionView(frame: CGRect(x: 50, y: 0, width: 300, height: 300), collectionViewLayout: layoutOne)
+        collectionView.register(viewCell.self, forCellWithReuseIdentifier: CELL_ID)
+        collectionView.delegate = self
+        collectionView.dataSource = self
         collectionView.backgroundColor = .blue
-        collectionView.frame = CGRect(x: 50, y: 0, width: 300, height: 300)
+        collectionView.isUserInteractionEnabled = true
+         //collectionView.frame = CGRect(x: 50, y: 0, width: 300, height: 300)
+      //  collectionView.translatesAutoresizingMaskIntoConstraints = false
+    //    collectionView.anchor(top: self.view.superview!.topAnchor, left: view.superview!.leadingAnchor, bottom: self.view.superview!.bottomAnchor, right: self.view.superview!.trailingAnchor, paddingTop: 40, paddingLeft: 40, paddingBottom: 40, paddingRight: 300, width: 0, height: 0, enableInsets: false)
         
-        collectionView.invalidateIntrinsicContentSize()
-        // Do any additional setup after loading the view.
         print("finished")
-    }
 
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -67,10 +83,16 @@ class cv1: UICollectionViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-       
+        print("prob not even called?")
             return CGSize(width: 100, height: 100)
         
         
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let temp = data[destinationIndexPath.item]
+        data.remove(at: sourceIndexPath.item)
+        data.insert(temp, at: destinationIndexPath.item)
     }
     // MARK: UICollectionViewDelegate
 

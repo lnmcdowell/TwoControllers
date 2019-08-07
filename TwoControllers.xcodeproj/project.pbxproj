@@ -13,6 +13,7 @@
 		2F471DB422FB662E00062743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F471DB222FB662E00062743 /* LaunchScreen.storyboard */; };
 		2F471DBC22FB670D00062743 /* cv1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F471DBB22FB670D00062743 /* cv1.swift */; };
 		2F471DBE22FB67D800062743 /* viewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F471DBD22FB67D800062743 /* viewCell.swift */; };
+		2F471DC022FB7F5700062743 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F471DBF22FB7F5700062743 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2F471DB522FB662E00062743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F471DBB22FB670D00062743 /* cv1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cv1.swift; sourceTree = "<group>"; };
 		2F471DBD22FB67D800062743 /* viewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewCell.swift; sourceTree = "<group>"; };
+		2F471DBF22FB7F5700062743 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				2F471DB522FB662E00062743 /* Info.plist */,
 				2F471DBB22FB670D00062743 /* cv1.swift */,
 				2F471DBD22FB67D800062743 /* viewCell.swift */,
+				2F471DBF22FB7F5700062743 /* Extension.swift */,
 			);
 			path = TwoControllers;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F471DC022FB7F5700062743 /* Extension.swift in Sources */,
 				2F471DBE22FB67D800062743 /* viewCell.swift in Sources */,
 				2F471DBC22FB670D00062743 /* cv1.swift in Sources */,
 				2F471DAC22FB662D00062743 /* ViewController.swift in Sources */,
