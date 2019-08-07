@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource  {
     var viewControllerOne:UICollectionViewController!
     
     
@@ -53,13 +53,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         viewControllerOne = cv1(collectionViewLayout: UICollectionViewFlowLayout())
         let firstView = viewControllerOne.collectionView
         self.view.isUserInteractionEnabled = false
+     // self.view = firstView!
          view.addSubview(firstView!)
-            firstView!.frame = CGRect(x: 50, y: 0, width: 300, height: 300)
+          //  firstView!.frame = CGRect(x: 50, y: 0, width: 300, height: 300)
             firstView!.isUserInteractionEnabled = true
             firstView!.translatesAutoresizingMaskIntoConstraints = false
-            firstView!.anchor(top: view.topAnchor, left: view.leadingAnchor, bottom: view.bottomAnchor, right: view.trailingAnchor, paddingTop: 50, paddingLeft: 50, paddingBottom: 50, paddingRight: 0, width: 400, height: 0, enableInsets: false)
-            
-        
+            firstView!.anchor(top: view.topAnchor, left: view.leadingAnchor, bottom: view.bottomAnchor, right: view.trailingAnchor, paddingTop: 50, paddingLeft: 50, paddingBottom: 50, paddingRight: 0, width: 0, height: 0, enableInsets: false)
+   //         view.bringSubviewToFront(firstView!)
+            //firstView!.m
 //        print("Collection One Loading")
 //        let layoutOne = UICollectionViewFlowLayout()
 //        layoutOne.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
